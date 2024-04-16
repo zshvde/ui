@@ -46,9 +46,7 @@ local function GetIcon(IconName)
 	end
 end   
 
-math.randomseed(os.time())
-
-function random_string(length)
+local function random_string(length)
   local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
   return string.sub(chars, math.random(#chars), math.random(#chars) + length - 1)
 end
