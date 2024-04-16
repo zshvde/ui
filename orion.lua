@@ -1,11 +1,11 @@
 
 
-local UserInputService = clonref(game:GetService("UserInputService"))
-local TweenService = cloneref(game:GetService("TweenService"))
-local RunService = cloneref(game:GetService("RunService"))
-local LocalPlayer = cloneref(game:GetService("Players")).LocalPlayer
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local LocalPlayer = game:GetService("Players")).LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
-local HttpService = cloneref(game:GetService("HttpService"))
+local HttpService = game:GetService("HttpService")
 
 local OrionLib = {
 	Elements = {},
