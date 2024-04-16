@@ -44,15 +44,10 @@ local function GetIcon(IconName)
 	else
 		return nil
 	end
-end   
-
-local function random_string(length)
-  local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  return string.sub(chars, math.random(#chars), math.random(#chars) + length - 1)
 end
 
 local Orion = Instance.new("ScreenGui")
-Orion.Name = random_string(5) --"Orion"
+Orion.Name = 'Pooron' --"Orion"
 if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
