@@ -49,12 +49,12 @@ end
 math.randomseed(os.time())
 
 function random_string(length)
-  local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
   return string.sub(chars, math.random(#chars), math.random(#chars) + length - 1)
 end
 
 local Orion = Instance.new("ScreenGui")
-Orion.Name = random_string(16) --"Orion"
+Orion.Name = random_string(5) --"Orion"
 if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
