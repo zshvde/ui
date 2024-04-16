@@ -46,8 +46,15 @@ local function GetIcon(IconName)
 	end
 end   
 
+math.randomseed(os.time())
+
+function random_string(length)
+  local chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  return string.sub(chars, math.random(#chars), math.random(#chars) + length - 1)
+end
+
 local Orion = Instance.new("ScreenGui")
-Orion.Name = HttpService:GenerateGUID(false):gsub('-', ''):gsub('.', function(c) if math.random() < 0.5 then return '' else return c end end) --"Orion"
+Orion.Name = random_string(16) --"Orion"
 if syn then
 	syn.protect_gui(Orion)
 	Orion.Parent = game.CoreGui
